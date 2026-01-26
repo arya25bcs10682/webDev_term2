@@ -1,0 +1,329 @@
+/* ===== Main Page ===== */
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  color: rgb(240, 241, 230);
+
+  background-image: repeating-radial-gradient(#0d0a0a 80%,
+      #2f312f 90%,
+      #3f4549 90%);
+  background-size: 65px 65px;
+}
+
+/* ===== Navbar ===== */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.navLeft {
+  padding-right: 2vw;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgba(255, 65, 65, 0.5);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: rgb(210, 226, 240);
+}
+
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: rgb(210, 226, 240);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+.clock {
+    font-size: 24px;
+    color: rgb(210, 226, 240);
+}
+
+/* ===== Main Layout ===== */
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.left {
+  width: 100%;
+  max-width: 750px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3vh;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#summary {
+  margin: 0;
+  font-size: 32px;
+  color: rgb(210, 226, 240);
+  ;
+}
+
+/* ===== Activity Ring ===== */
+
+.activityRing {
+  position: relative;
+
+  width: clamp(160px, 45vw, 240px);
+  height: clamp(160px, 45vw, 240px);
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  mask: radial-gradient(farthest-side,
+      transparent 65%,
+      #000 66%);
+}
+
+.move {
+  background: conic-gradient(#d50027 0deg 72deg,
+      #511616 72deg 360deg);
+}
+
+.excercise {
+  inset: 18px;
+  background: conic-gradient(#03ce21 0deg 210deg,
+      #0d6d02 210deg 360deg);
+}
+
+.task {
+  inset: 36px;
+  background: conic-gradient(#2daeff 0deg 300deg,
+      #025568 300deg 360deg);
+}
+
+/* ===== Ring + Stats Section ===== */
+
+.middlepart {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 10px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Stat Cards */
+
+.movestat,
+.excercisestat,
+.taskstat {
+  height: 64px;
+  width: clamp(180px, 60vw, 300px);
+
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  background-color: rgba(197, 211, 214, 0.5);
+}
+
+.movestat {
+  color: #d50027;
+}
+
+.excercisestat {
+  color: #03ce21;
+}
+
+.taskstat {
+  color: #2daeff;
+}
+
+/* ===== Navigation Tabs ===== */
+
+.plus {
+  margin-top: 25px;
+
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+
+  padding: 12px 0;
+  border-radius: 14px;
+
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+
+  transition: 0.2s;
+}
+
+.tab:hover {
+  transform: scale(1.05);
+}
+
+.move-tab {
+  background: rgba(213, 0, 39, 0.5);
+}
+
+.exercise-tab {
+  background: rgba(3, 206, 33, 0.5);
+}
+
+.task-tab {
+  background: rgba(45, 174, 255, 0.5);
+}
+
+/* ================================================= */
+/* 📱 MOBILE RESPONSIVE FIXES */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+  /* Navbar stacks */
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Smaller heading */
+  #summary {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Ring + stats stack */
+  .middlepart {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Stat cards full width */
+  .movestat,
+  .excercisestat,
+  .taskstat {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  /* Tabs stack vertically */
+  .plus {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tab {
+    width: 100%;
+    padding: 14px;
+  }
+
+  /* Exit button smaller */
+  .Btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* ================================================= */
+/* 💻 TABLET IMPROVEMENTS */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+  .middlepart {
+    gap: 20px;
+  }
+
+  .movestat,
+  .excercisestat,
+  .taskstat {
+    width: clamp(200px, 50vw, 280px);
+  }
+}
