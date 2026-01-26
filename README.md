@@ -99,3 +99,4 @@ lifestyle-tracker/
 I agree that this project has been made with the help of ai not completly but partially. Their were things in js and css that i did not know could be done.
 For Example the ring system that i have in this website, weekly reset system for the task managment system and some other things.
 The inspiration for this website was completly mine no ai involved in that.
+At the end of the project i did paste my entire code in gpt to resolve the mess and add proper comments for everyone to understand better
