@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    min-height: 100vh;
     color: rgb(240, 241, 230);
     height: 100%;
     /* Add your background pattern here */
